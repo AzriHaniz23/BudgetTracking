@@ -9,6 +9,8 @@
                 </div>
             @endif
 
+            <h2 class="text-2xl font-bold mb-6">Sign in</h2>
+
             <form action="{{ route('login') }}" method="post">
                 @csrf
 
@@ -34,11 +36,12 @@
                     @enderror
                 </div>
 
-                <div class="mb-4">
-                    <div class="flex items-center">
+                <div class="flex justify-between mb-4">
+                    <div>
                         <input type="checkbox" name="remember" id="remember" class="mr-2">
                         <label for="remember">Remember me</label>
                     </div>
+                    <a href="{{ route('password.request') }}" class="text-blue-500 text-sm">Forgot Password?</a>
                 </div>
 
                 <div>
